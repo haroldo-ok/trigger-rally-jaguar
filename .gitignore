@@ -1,0 +1,18 @@
+# Build caches and preferred-source rebuild intermediates
+.cache/
+.venv/
+__pycache__/
+*.pyc
+vendor/lyxass/*.o
+vendor/lyxass/*.P
+vendor/lyxass/lyxass
+artifacts/*.o
+artifacts/*.elf
+artifacts/*.map
+artifacts/program.bin
+artifacts/math.bin
+artifacts/*.j64
+artifacts/e2e-negative-control/*.j64
+releases/*.zip
+# Converted assets/ROM contain separately restricted original content.
+# Do not publish a content-bearing tree merely because source is GPL.

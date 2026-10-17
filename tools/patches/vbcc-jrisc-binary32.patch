@@ -1,0 +1,194 @@
+--- a/machines/jrisc/machine.c
++++ b/machines/jrisc/machine.c
+@@ -22,7 +22,7 @@
+ 		    0,0,
+ 		    VALFLAG,0,0,
+ 		    0,VALFLAG,0,
+-		    0};
++		    0,0};
+ 
+ /* the flag-name, do not use names beginning with l, L, I, D or U, because
+    they collide with the frontend */
+@@ -31,7 +31,7 @@
+ 			   "gpulocal","dspmain",
+ 			   "gpr-args","gpuvars","dsplocal",
+ 			   "no-delayed-popping","workaround","hwmodu",
+-			   "dspvars"};
++			   "dspvars","binary32"};
+ 
+ /* the results of parsing the command-line-flags will be stored here */
+ union ppi g_flags_val[MAXGF];
+@@ -126,6 +126,7 @@
+ #define WORKAROUND ((g_flags[11]&USEDFLAG)?g_flags_val[11].l:-1)
+ #define HWMODU     (g_flags[12]&USEDFLAG)
+ #define DSPVARS    (g_flags[13]&USEDFLAG)
++#define BINARY32   (g_flags[14]&USEDFLAG)
+ 
+ 
+ #define ISIDX(r) ((r)==15||(r)==16)
+@@ -440,7 +441,7 @@
+     if((p->q1.flags&REG)&&p->q1.reg==r) continue;
+     if((p->q2.flags&REG)&&p->q2.reg==r) continue;
+     if((p->z.flags&REG)&&p->z.reg==r) continue;
+-    regs[r]|=16;
++    regs[r]|=16|8; /* Saved temporaries must also be reserved for this IC. */
+     emit(f,"\tsubq\t4,%s\n",regnames[sp]);
+     emit(f,"\tstore\t%s,(%s)\n",regnames[r],regnames[sp]);
+     return r;
+@@ -568,7 +569,9 @@
+     unsigned long l;
+     eval_const(&o->val,type);
+     if(type==FLOAT){
+-      ierror(0);
++      unsigned char *b=(unsigned char *)&vfloat;
++      unsigned long bits=((unsigned long)b[0]<<24)|((unsigned long)b[1]<<16)|((unsigned long)b[2]<<8)|b[3];
++      qmov(f,bits,r);
+     }else if(type==DOUBLE||type==LDOUBLE){
+       ierror(0);
+     }else if(type==LLONG){
+@@ -667,7 +670,7 @@
+       zreg=t1;
+   }
+   
+-  if(p->code!=CALL&&p->code!=ADDRESS&&(p->q1.flags&(VAR|REG|VARADR))==VAR&&!direct_stack_var(&p->q1,q1typ(p))){
++  if((p->code!=CALL||(p->q1.flags&DREFOBJ))&&p->code!=ADDRESS&&(p->q1.flags&(VAR|REG|VARADR))==VAR&&!direct_stack_var(&p->q1,q1typ(p))){
+     load_address(f,t1,&p->q1,POINTER);
+     p->q1.reg=t1;
+     p->q1.flags^=(VAR|REG);
+@@ -1009,6 +1012,7 @@
+ 
+   rsavesize=0;
+   if(!special_section(f,v)&&section!=CODE){emit(f,codename);if(f) section=CODE;} 
++  emit(f,"# function %s\n",v->identifier);
+   emit(f,"\t.align\t%s\n",(workaround&4)?"8":"2");
+   if(v->storage_class==EXTERN){
+     if((v->flags&(INLINEFUNC|INLINEEXT))!=INLINEFUNC)
+@@ -1135,8 +1139,8 @@
+   t1=31;
+   t2=29;
+   lr=28;
+-  f1=31+32+16;
+-  f2=f1-1;
++  f1=t1;
++  f2=t2;
+ 
+ 
+   regsa[t1]=regsa[t2]=regsa[32]=1;
+@@ -1170,6 +1174,20 @@
+   declare_builtin("__moduint32dsp",UNSIGNED|INT,UNSIGNED|INT,FIRST_GPR+2,UNSIGNED|INT,FIRST_GPR+3,1,0);
+ 
+ 
++  if(BINARY32){
++  declare_builtin("__tr_add",FLOAT,FLOAT,FIRST_GPR+2,FLOAT,FIRST_GPR+3,1,0);
++  declare_builtin("__tr_sub",FLOAT,FLOAT,FIRST_GPR+2,FLOAT,FIRST_GPR+3,1,0);
++  declare_builtin("__tr_mul",FLOAT,FLOAT,FIRST_GPR+2,FLOAT,FIRST_GPR+3,1,0);
++  declare_builtin("__tr_div",FLOAT,FLOAT,FIRST_GPR+2,FLOAT,FIRST_GPR+3,1,0);
++  declare_builtin("__tr_cmp",INT,FLOAT,FIRST_GPR+2,FLOAT,FIRST_GPR+3,1,0);
++  declare_builtin("__tr_neg",FLOAT,FLOAT,FIRST_GPR+2,0,0,1,0);
++  declare_builtin("__tr_tst",INT,FLOAT,FIRST_GPR+2,0,0,1,0);
++  declare_builtin("__tr_fromu",FLOAT,UNSIGNED|INT,FIRST_GPR+2,0,0,1,0);
++  declare_builtin("__tr_fromi",FLOAT,INT,FIRST_GPR+2,0,0,1,0);
++  declare_builtin("__tr_tou",UNSIGNED|INT,FLOAT,FIRST_GPR+2,0,0,1,0);
++  declare_builtin("__tr_toi",INT,FLOAT,FIRST_GPR+2,0,0,1,0);
++
++  }
+   if(GPUMAIN) dmode=M_GPUMAIN;
+   if(GPULOCAL) dmode=M_GPULOCAL;
+   if(DSPMAIN) dmode=M_DSPMAIN;
+@@ -1193,7 +1211,9 @@
+ /*  A pointer MUST be returned in a register. The code-generator    */
+ /*  has to simulate a pseudo register if necessary.                 */
+ {
+-  if(ISFLOAT(t->flags)) 
++  if((t->flags&NQ)==FLOAT)
++    return FIRST_GPR;
++  if(ISFLOAT(t->flags))
+     return FIRST_PAIR;
+   if(ISSTRUCT(t->flags)||ISUNION(t->flags)) 
+     return 0;
+@@ -1393,7 +1413,7 @@
+     if(ISFLOAT(t)){
+       /*  auch wieder nicht sehr schoen und IEEE noetig   */
+       unsigned char *ip;
+-      ip=(unsigned char *)&p->val.vdouble;
++      ip=(unsigned char *)&p->val.vfloat;
+       emit(f,"0x%02x%02x%02x%02x",ip[0],ip[1],ip[2],ip[3]);
+       if((t&NQ)!=FLOAT){
+ 	emit(f,",0x%02x%02x%02x%02x",ip[4],ip[5],ip[6],ip[7]);
+@@ -1529,7 +1549,7 @@
+       else ct=1;
+       cnt=zum2ul(p->q2.val.vumax);
+       if((p->q1.flags&(REG|DREFOBJ))==(REG|DREFOBJ)){
+-	if(scratch(p->next,p->q1.reg,0)){
++	if(0){ /* Preserve live aggregate source pointers across block copies. */
+ 	  sreg=p->q1.reg;
+ 	}else{
+ 	  sreg=t1;
+@@ -1550,7 +1570,7 @@
+ 	dontpop+=zm2l(cnt);
+ 	emit(f,"\tmove\t%s,%s\n",regnames[fpmerk],regnames[t2]);
+       }else if((p->z.flags&(REG|DREFOBJ))==(REG|DREFOBJ)){
+-	if(scratch(p->next,p->z.reg,0)/*&&(!optspeed||ISIDX(p->z.reg))*/){
++	if(0){ /* Preserve the caller's destination pointer as well. */
+ 	  dreg=p->z.reg;
+ 	}else{
+ 	  dreg=t2;
+@@ -2019,6 +2039,23 @@
+ char *use_libcall(int c,int t,int t2)
+ {
+   static char ret[20];
++  /* Project extension: binary32 in ordinary GPRs, with real local-DSP
++     arithmetic supplied by src/dsp/float32.c. No emulated host FPU. */
++  if(BINARY32 && c==CONVERT){
++    if((t&NQ)==FLOAT && (t2&NQ)<=LONG)
++      return (t2&UNSIGNED)?"__tr_fromu":"__tr_fromi";
++    if((t2&NQ)==FLOAT && (t&NQ)<=LONG)
++      return (t&UNSIGNED)?"__tr_tou":"__tr_toi";
++  }
++  if(BINARY32 && (t&NQ)==FLOAT){
++    if(c==ADD) return "__tr_add";
++    if(c==SUB) return "__tr_sub";
++    if(c==MULT) return "__tr_mul";
++    if(c==DIV) return "__tr_div";
++    if(c==MINUS) return "__tr_neg";
++    if(c==COMPARE) return "__tr_cmp";
++    if(c==TEST) return "__tr_tst";
++  }
+   if(c==MULT) return mode_suffix(strcpy(ret,"__mulint32"));
+   if(c==DIV&&!(t&UNSIGNED)) return mode_suffix(strcpy(ret,"__divint32"));
+   if(c==MOD){
+--- a/machines/jrisc/machine.h
++++ b/machines/jrisc/machine.h
+@@ -132,10 +132,10 @@
+ #define MIN_FLOAT_TO_INT_TYPE INT
+ 
+ /* do not create CONVERT_ICs from floats to unsigned integers */
+-#define AVOID_FLOAT_TO_UNSIGNED 1
++#define AVOID_FLOAT_TO_UNSIGNED 0
+ 
+ /* do not create CONVERT_ICs from unsigned integers to floats */
+-#define AVOID_UNSIGNED_TO_FLOAT 1
++#define AVOID_UNSIGNED_TO_FLOAT 0
+ 
+ /* convert multiplications/division by powers of two to shifts */
+ #define HAVE_POF2OPT 1
+--- a/machines/jrisc/schedule.c
++++ b/machines/jrisc/schedule.c
+@@ -125,7 +125,7 @@
+   }
+ 
+   /* store rx,(ry) */
+-  if(sscanf(p->txt,"%19s r%d,(r%d)",buf,&r1,&r2)==3){
++  if(sscanf(p->txt,"%19s r%d,(r%d)",buf,&r1,&r2)==3&&!strchr(p->txt,'+')){
+     p->latency=4;
+     BSET(p->uses,r1);
+     BSET(p->uses,r2);
+@@ -145,7 +145,7 @@
+   }
+ 
+   /* store rx,(ry+ri) */
+-  if(sscanf(p->txt,"%19s r%d,(r%d+%d)",buf,&r1,&r2,&i)==4){
++  if(sscanf(p->txt,"%19s r%d,(r%d+r%d)",buf,&r1,&r2,&i)==4){
+     p->latency=6;
+     BSET(p->uses,r1);
+     BSET(p->uses,r2);

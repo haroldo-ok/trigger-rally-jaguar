@@ -1,0 +1,43 @@
+name: Virtual Jaguar E2E
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  black-screen-regression:
+    runs-on: ubuntu-latest
+    container: debian:trixie-slim
+    timeout-minutes: 35
+    steps:
+      - name: Install native toolchain and real desktop emulator
+        run: |
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            ca-certificates git make build-essential gcc-m68k-linux-gnu \
+            binutils-m68k-linux-gnu python3 python3-numpy python3-scipy \
+            python3-pil python3-opencv ffmpeg virtualjaguar xvfb xdotool \
+            imagemagick x11-xserver-utils x11-utils libgl1-mesa-dri libglx-mesa0
+      - uses: actions/checkout@v4
+      - name: Fetch exact source inputs and build actual cartridge/test core
+        run: |
+          make fetch-upstream
+          make -j4
+          make test-core
+      - name: Real ROM gameplay, boot matrix, desktop and negative controls
+        run: make test
+      # Diagnostic captures only, never a potentially broken/negative-control ROM.
+      # Original content rights must still be cleared before public publication.
+      - name: Preserve evidence even when a regression fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: virtual-jaguar-e2e-evidence
+          path: |
+            releases/build-info.json
+            artifacts/**/*.json
+            artifacts/**/*.jsonl
+            artifacts/**/*.png
+            artifacts/**/*.log
+          if-no-files-found: warn

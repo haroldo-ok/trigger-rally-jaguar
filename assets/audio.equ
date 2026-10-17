@@ -1,0 +1,2 @@
+init_audio               EQU 15839488
+end_audio                EQU 15839728

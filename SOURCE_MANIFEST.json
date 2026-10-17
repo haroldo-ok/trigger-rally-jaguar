@@ -1,0 +1,799 @@
+{
+  "kind": "native port/build/test sources with required converted data and signed-loader input",
+  "status": "Experimental drivable racing; full original feature/fidelity conversion remains INCOMPLETE",
+  "prebuilt_game_or_emulator_included": false,
+  "historical_release_reports_included": false,
+  "build_inputs_retained": [
+    "converted asset bank and IDs",
+    "bitmap font",
+    "pre-signed loader with corresponding editable source"
+  ],
+  "emulator_source_snapshot": {
+    "upstream_revision": "6bf3574c1a98ccd57719ff6b822122017b8e5942",
+    "original_archive_sha256": "c092c96dba518702ab8128176582804c75cded4c04ce439a5aa92b0381859724",
+    "packaged_archive_sha256": "44ba2f06621731eade2f66d07dae3c728cbf41528c32c09d8cd2eca738d6594b",
+    "retained_regular_files": 1248,
+    "retained_code_build_license_files": 942,
+    "removed_optional_artwork_or_precompiled_test_data": [
+      "virtualjaguar-libretro/docs/site/pr-after-compat.png",
+      "virtualjaguar-libretro/docs/site/pr-after-home-canvasui.png",
+      "virtualjaguar-libretro/docs/site/pr-after-home-fallback.png",
+      "virtualjaguar-libretro/docs/site/pr-avp-hires-crop-door.png",
+      "virtualjaguar-libretro/docs/site/pr-avp-hires-crop-wall.png",
+      "virtualjaguar-libretro/docs/site/pr-avp-hires-fullframe.png",
+      "virtualjaguar-libretro/docs/site/pr-before-home.png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Alice's Mom's Rescue! (Europe) (En,Fr,De,Es,It).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Baldies (USA) (Rev 1).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Battle Morph (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Blue Lightning (USA) (En,Fr,De).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Blue Lightning (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/BrainDead 13 (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Dragon's Lair (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Frog Feast (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Highlander - The Last of the MacLeods (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Hover Strike - Unconquered Lands (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Iron Soldier 2 (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Myst (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Philia - The Sequel to Elansar (Europe) (En,Fr).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Primal Rage (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Robinson's Requiem (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Space Ace (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Vid Grid (USA) (Rev 1).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/Vid Grid (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/World Tour Racing (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Boxarts/World Tour Racing (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Alice's Mom's Rescue! (Europe) (En,Fr,De,Es,It).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Baldies (USA) (Rev 1).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Battle Morph (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Blue Lightning (USA) (En,Fr,De).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Blue Lightning (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/BrainDead 13 (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Dragon's Lair (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Frog Feast (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Highlander - The Last of the MacLeods (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Hover Strike - Unconquered Lands (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Iron Soldier 2 (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Myst (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Primal Rage (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Robinson's Requiem (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Space Ace (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Vid Grid (USA) (Rev 1).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/Vid Grid (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/World Tour Racing (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Snaps/World Tour Racing (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Alice's Mom's Rescue! (Europe) (En,Fr,De,Es,It).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Baldies (USA) (Rev 1).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Battle Morph (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Beebris (Australia) (Disc 1).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Blue Lightning (USA) (En,Fr,De).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Blue Lightning (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/BrainDead 13 (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Dragon's Lair (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Frog Feast (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Highlander - The Last of the MacLeods (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Hover Strike - Unconquered Lands (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Iron Soldier 2 (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Myst (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Ocean Depths (Germany).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Philia - The Sequel to Elansar (Europe) (En,Fr).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Primal Rage (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Robinson's Requiem (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Simone (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Space Ace (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Vid Grid (USA) (Rev 1).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/Vid Grid (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/World Tour Racing (USA) (Songbird).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/Named_Titles/World Tour Racing (USA).png",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/README.md",
+      "virtualjaguar-libretro/site/thumbnails/Atari - Jaguar CD/SOURCES.tsv",
+      "virtualjaguar-libretro/site/thumbnails/index.html",
+      "virtualjaguar-libretro/test/acid/tests/blitter/pattern_fill.jag",
+      "virtualjaguar-libretro/test/microbench/bench68k.j64",
+      "virtualjaguar-libretro/test/microbench/benchblit.j64",
+      "virtualjaguar-libretro/test/microbench/benchdsp.j64",
+      "virtualjaguar-libretro/test/microbench/benchgpu_arith.j64",
+      "virtualjaguar-libretro/test/microbench/benchgpu_branch.j64",
+      "virtualjaguar-libretro/test/roms/jagniccc.j64",
+      "virtualjaguar-libretro/test/roms/synth_jagcd.chd",
+      "virtualjaguar-libretro/test/roms/synth_jagcd_multi.chd",
+      "virtualjaguar-libretro/test/roms/synth_jagcd_nosession.chd",
+      "virtualjaguar-libretro/test/roms/synth_jagcd_vpregap.chd",
+      "virtualjaguar-libretro/test/roms/yarc.j64"
+    ],
+    "retained_file_contents_unchanged": true
+  },
+  "files": {
+    ".github/workflows/virtual-jaguar-e2e.yml": {
+      "bytes": 1588,
+      "sha256": "8387dd68f1b7cf7eb4c7f2682626bb72f418383d9144c1ef2107f635cb4b6261"
+    },
+    ".gitignore": {
+      "bytes": 445,
+      "sha256": "063538ebcaf11e49ae8229692b9832a32143d85b30453ea69d39a67a90f4fb09"
+    },
+    "LICENSE": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "LICENSES.md": {
+      "bytes": 7216,
+      "sha256": "8b9ef158d6f2340be846f06543ff56b11a37e9359ca66474793dcb9ab5a706b1"
+    },
+    "Makefile": {
+      "bytes": 6396,
+      "sha256": "dba928224bd5813f9f547caa9b04312dd9840807700cb7e851c74cd6dcd91e1a"
+    },
+    "README.md": {
+      "bytes": 15144,
+      "sha256": "9fa52d99992613309741c4109342b94f8adecd7a46b138042275b8d661eb20e8"
+    },
+    "assets/RF87t6b6-terrain.png": {
+      "bytes": 517,
+      "sha256": "051503efd8f43ff3663c72171e57b9f5d216f0e932434b6097ab40d85ab93307"
+    },
+    "assets/asset_ids.h": {
+      "bytes": 766,
+      "sha256": "8e6221271e965028a607f3e2ebfafed912fd4d152f754757e4ebd289e4741c29"
+    },
+    "assets/asset_ids.inc": {
+      "bytes": 656,
+      "sha256": "50357a58bfc942e6bbcd71a33840a36bed411df636980d71bad90517fbd9fee2"
+    },
+    "assets/assets.bin": {
+      "bytes": 2216280,
+      "sha256": "ecc9ddfd9491c6c47ebefc3ade1a2b9b03e94b9267b664bae547cfb343c8ab20"
+    },
+    "assets/audio.equ": {
+      "bytes": 76,
+      "sha256": "076294990d29395afd98238b4b3122d3c0ad344849321ee3bea3222415efa763"
+    },
+    "assets/gpu.equ": {
+      "bytes": 1279,
+      "sha256": "599400af374c9c018581f4f20157e2da25fed8a3db90c377ac7e26bf67e2391c"
+    },
+    "assets/manifest.json": {
+      "bytes": 13634,
+      "sha256": "7697ecdcda91bea4d9a15dc132f486d94c372717ba172e63094ae24e55c163ae"
+    },
+    "assets/memory.json": {
+      "bytes": 945,
+      "sha256": "23ba83ae93d3b34b512b40abdd742ed39aa4b22c2ea7f15492f6d25b74981f79"
+    },
+    "assets/uUJTPz6M-terrain.png": {
+      "bytes": 611,
+      "sha256": "68c458dc8cec91562c67f8a8d97081a72d0b9dde7c141c67c3eca3b40852f176"
+    },
+    "assets/v3base2-terrain.png": {
+      "bytes": 417,
+      "sha256": "6b2a251fb62202fb98e30370ae46457a3c4e3a5f342afb09134bbde7b2db69be"
+    },
+    "docs/BLACK_SCREEN_REGRESSION.md": {
+      "bytes": 12705,
+      "sha256": "7711bac0e7f56d94357fdc06bc1cf74d25085b64bcd44bdc898f12a9188d7d01"
+    },
+    "docs/BUILDING.md": {
+      "bytes": 7890,
+      "sha256": "7144f3e6ad00b923ad256c10ca482dfa809a4cd42d64bad7549ab2d22be288a8"
+    },
+    "docs/ENGINE_INTEGRATION.md": {
+      "bytes": 8161,
+      "sha256": "d0bd21a5df1c19ac429e9f88be14fc2b2be21c31f915d0b6f44e51e9f42ad9a9"
+    },
+    "docs/PLAYABILITY.md": {
+      "bytes": 7414,
+      "sha256": "eef3e236e914346fb11b8e0ff3332dbe0296ca594de038fc793f2aef5835766b"
+    },
+    "docs/PORT_STATUS.md": {
+      "bytes": 7542,
+      "sha256": "e6da0863bae9093a8e07bda93f85abf3b87c958db5d474776a46cda3b5936ea6"
+    },
+    "docs/TESTING.md": {
+      "bytes": 10983,
+      "sha256": "be88308aec54c89c981bebe8721725dbfc3c388f6d9c137d5749aff74f0c9a1c"
+    },
+    "licenses/GCC-RUNTIME-EXCEPTION.txt": {
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    "licenses/GPL-3.0.txt": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "licenses/Miramar-skybox.txt": {
+      "bytes": 293,
+      "sha256": "d7a6e438a6f4673c52768bd573d2fef6e4b0f32a50355b7115f0dc41bbe4fb49"
+    },
+    "licenses/TriggerRally-terms.md": {
+      "bytes": 1790,
+      "sha256": "8f278cdeeeba73637aa0e522fe7a06cb62a0f31e837ac8c4cb2fe55b83d51788"
+    },
+    "licenses/VirtualJaguar-GPL.txt": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "licenses/jag_3d_engine-MIT.txt": {
+      "bytes": 1066,
+      "sha256": "57584358c901f83ef6d300701a66fbd9b1f1152151ac5a84fca347f65f99825b"
+    },
+    "licenses/lyxass-MIT.txt": {
+      "bytes": 1073,
+      "sha256": "91a54c70553047c9d109bfefb0fe63241770a6ba059f9fea11bebf97a763625d"
+    },
+    "licenses/new_bjl.txt": {
+      "bytes": 1275,
+      "sha256": "9bbf974fa4d4fc495ec87bff4c0a9d9c3fa8158bdceac013ba8e4b9fab48774d"
+    },
+    "requirements.txt": {
+      "bytes": 64,
+      "sha256": "4573030601a404d4c8b02407b68bde3eb9ba09e3c1277aca6179e57db0649b6b"
+    },
+    "src/boot.XXX": {
+      "bytes": 1040,
+      "sha256": "c514910c32f6287dba49514a7982f7fd714a7b76fcfff320521c6bb568af487c"
+    },
+    "src/boot.js": {
+      "bytes": 2110,
+      "sha256": "889684a0b6c756b63d96a19a032c97f240b88c2137f6ac583a6e64b02a90e494"
+    },
+    "src/cartboot.S": {
+      "bytes": 1000,
+      "sha256": "fd2b852b4a7166b2ae6a3c6319a8f9d67f95e65334528e6478102948e3f4d95b"
+    },
+    "src/data.h": {
+      "bytes": 2263,
+      "sha256": "d226360f2d05e10e104070b2f2d2cfae8652b1624d49ed41a38c5010f225efac"
+    },
+    "src/dsp/data.s": {
+      "bytes": 217,
+      "sha256": "de9763135bb4bbe7c41b1e00986538ba8b7fab4a83c88994efb0830c631df649"
+    },
+    "src/dsp/float32.c": {
+      "bytes": 4952,
+      "sha256": "b9df08b1a42b2af82a48b0a39ac5d2ffef1c719ed75fbf0abe50ea694efa00da"
+    },
+    "src/dsp/float_fast.s": {
+      "bytes": 6738,
+      "sha256": "5a5289aa9d10f14e197c34172dece81ead534582f306d74b35f46b6b3cc752ff"
+    },
+    "src/dsp/include/stddef.h": {
+      "bytes": 256,
+      "sha256": "1d019261783bccf352359e0d98ed810bee0c8c5063c24b7ba7476b11ce234d0e"
+    },
+    "src/dsp/include/stdint.h": {
+      "bytes": 369,
+      "sha256": "61fdda8f42fac2d3cae4993642e8f83d6ce486e9e8a8f2c67387730d03f83a65"
+    },
+    "src/dsp/integers.s": {
+      "bytes": 1153,
+      "sha256": "2b26e82704ed0c471bdba90625ee29243e735b3cfcbde5304efd00c87fa1186f"
+    },
+    "src/dsp/link.ld": {
+      "bytes": 721,
+      "sha256": "cae8368aabbc398703833befc3470945c85699a0adabfc69b0c5b6a70a20d2b9"
+    },
+    "src/dsp/start.s": {
+      "bytes": 1966,
+      "sha256": "9270f83c9da7bbfbfcfe9c250add62a87382f5a42bbdcde6702b80377bfcda90"
+    },
+    "src/dsp_blob.S": {
+      "bytes": 300,
+      "sha256": "50f9ac1f9567ffee74e46254101dde78567ab8b88fd18d4955409a4a78dd1dd9"
+    },
+    "src/font8x8.bin": {
+      "bytes": 2056,
+      "sha256": "7d31650491e9cae0fec5c8c809ed8b12b753023704ffc26f364f02a0b578d812"
+    },
+    "src/gpu/addobj.inc": {
+      "bytes": 4016,
+      "sha256": "68a8480e1c5523cd013b2473ab79e0a8f8f5bcc6e4c2f9bbf49a1c1eea8d059c"
+    },
+    "src/gpu/audio.js": {
+      "bytes": 1863,
+      "sha256": "b6eee14472a657629a1c9ab114191f89d88f17a7af0de0e4f26d5a12f86a1014"
+    },
+    "src/gpu/createplane.inc": {
+      "bytes": 8311,
+      "sha256": "8a4e1e9c42f040a392fa6476c9504c6ac3477af576414aed119a29db06fe677d"
+    },
+    "src/gpu/draw2.inc": {
+      "bytes": 8022,
+      "sha256": "133ad8fc749d0240041f29c707d769c7beb0435ff99091587ad6b9e146a257bb"
+    },
+    "src/gpu/draw2_nog.inc": {
+      "bytes": 4757,
+      "sha256": "e5a9a0f4e50bfa8bd417f4543545dab10d4fbc45b65c6de1fffbfaf6172deefc"
+    },
+    "src/gpu/draw2_txt.inc": {
+      "bytes": 9124,
+      "sha256": "c281363726aae28b2b82f9c3d6a49d7f0b5d0cccc83571b9cbca55606d691297"
+    },
+    "src/gpu/engine.h": {
+      "bytes": 444,
+      "sha256": "fab6eb99f978c395e1cf705d1aca4d2f72ca12a440dc1d21c365ede4b196de7b"
+    },
+    "src/gpu/engine.js": {
+      "bytes": 8236,
+      "sha256": "9da734b94924d7aa5ba162976537c689d42380070ab257d306b4b949f8365c4b"
+    },
+    "src/gpu/globalreg.h": {
+      "bytes": 505,
+      "sha256": "83ea0ba358943fa6dc2565a9847f8d54e1327408be930b7f1843c5dd2b489498"
+    },
+    "src/gpu/gouraud.inc": {
+      "bytes": 1107,
+      "sha256": "d5200df840f549ad63b83fac1d6eb065bdccf8a2f046e78bd7c35bfee0e46082"
+    },
+    "src/gpu/irq.js": {
+      "bytes": 1300,
+      "sha256": "263ce0b49e65443da315ef7ec73bbd5e1f8298a50ca98e56e53deaeba9e12f03"
+    },
+    "src/gpu/memory.inc": {
+      "bytes": 901,
+      "sha256": "f07f820d59a73a2e0a810b91b05637ed47ef851cb51ceabf873b8a2e622161f2"
+    },
+    "src/gpu/obl.S": {
+      "bytes": 1423,
+      "sha256": "3b6188fb4a0044e94b2dcad3724c5866b2c901232ba4a41710d131c54a56bf38"
+    },
+    "src/gpu/plane_prep.js": {
+      "bytes": 1458,
+      "sha256": "37f5267897a9aebf127295542fefc011019984e0c18dc7ee4762dbfd548e86b0"
+    },
+    "src/gpu/project.inc": {
+      "bytes": 2569,
+      "sha256": "bc0fe421815dee1f2677e40e5e78960d25cac4bc213720778a86921f4f1ad4e6"
+    },
+    "src/gpu/rally.js": {
+      "bytes": 4517,
+      "sha256": "57f16096b507dfb2628d7452440a664b361d083df23229b4b776d36e869b7f90"
+    },
+    "src/gpu/rotate.inc": {
+      "bytes": 5262,
+      "sha256": "ccbca53cf71ae0bb53bc757d6fb157b66dd86a5540dc0a52fdfa193f56d9ca8e"
+    },
+    "src/gpu/sintab.inc": {
+      "bytes": 6877,
+      "sha256": "5d837c91d4cf389c118539f8476dcb058ad8abed376dee9a7744e57dc38b04bb"
+    },
+    "src/gpu/structs.inc": {
+      "bytes": 3234,
+      "sha256": "0b4882a8f552d96cb4d07bc5149d387405c63a90dddd8a78c4a7ed5daa90b9d4"
+    },
+    "src/gpu/video.h": {
+      "bytes": 1399,
+      "sha256": "376834844ca5dc0a24359aeb38f56cc448ce469f5efc59c969885380f08f9fdf"
+    },
+    "src/gpu/visible.inc": {
+      "bytes": 2716,
+      "sha256": "59a63bfff7cbe56fd624a7ae5c5109907d0d40bb70494cf50eb1d561c29d62b4"
+    },
+    "src/host.c": {
+      "bytes": 1127,
+      "sha256": "1e34b2a4da21b251c9ba52e32cce31c07ee0ec3273c57b1a8a2ca6eadd874164"
+    },
+    "src/jaguar.ld": {
+      "bytes": 630,
+      "sha256": "7c527d8aed5db407e956bfab94424ea3dd43a68aa62086b9ced4603fe2954f6d"
+    },
+    "src/main.c": {
+      "bytes": 18601,
+      "sha256": "3f0ea9a62ea0c9361d6348581d44b85da6f1b8b445892a862b3ed25d5298aae6"
+    },
+    "src/math3d.h": {
+      "bytes": 3582,
+      "sha256": "451db8c14cf00f878242aaa6a287414b650ff40fef5cb52c0122c28c41298d9e"
+    },
+    "src/memory.h": {
+      "bytes": 1370,
+      "sha256": "77f430d0b813ac1456bfbf341a180c7ef100fa5d5ffdbda026de196c7fdc02f7"
+    },
+    "src/physics.c": {
+      "bytes": 15879,
+      "sha256": "e4bd832dacc37740fd6796cbe901a575fc391e72dae0ba10fb9b96f41c4b0285"
+    },
+    "src/physics.h": {
+      "bytes": 1199,
+      "sha256": "dced12a308c6fcc442cd4f94864f8d47a8fa73abb30143be2f29c85a0bc2b856"
+    },
+    "src/render_math.c": {
+      "bytes": 1485,
+      "sha256": "82a6513c5a6223e16b91dec755181e6170c769db5a60709d9f7f42f7829444a1"
+    },
+    "src/render_math.h": {
+      "bytes": 466,
+      "sha256": "d5107a766a0fadf171b02e0fadc0796786e585cfe758a1d1bfdfddf76402a28b"
+    },
+    "src/render_tables.h": {
+      "bytes": 3490,
+      "sha256": "cfd1855d23153cb3146227ff1a080ffa4cbf76663c32c08ca68e99a1765a909e"
+    },
+    "src/runtime.h": {
+      "bytes": 2179,
+      "sha256": "60534b391cc9123c7b6261ab18eecfd26b943bc6727db80e1edf3017f167fc39"
+    },
+    "src/softfloat.c": {
+      "bytes": 1345,
+      "sha256": "82beac7700d81dcc1379f03bb8cfb3e0ed11b9dd9425528ed086a107878d7397"
+    },
+    "src/start.S": {
+      "bytes": 911,
+      "sha256": "a8905e9c284c19f30e6ef8bae64f69cb660218c64e76cb4e62951bf94db12a43"
+    },
+    "tests/black_screen_suite.py": {
+      "bytes": 7233,
+      "sha256": "ca2694a173bebd6ffc7f83b7aa519b88d7fae6b6315656f45b083d75652707a2"
+    },
+    "tests/check_assets.py": {
+      "bytes": 5454,
+      "sha256": "c4e00da8338d88a7d1ecf7a27386a4a1dd3b70ee3e0ec4e481f51860cf24c942"
+    },
+    "tests/check_dsp_math.py": {
+      "bytes": 6186,
+      "sha256": "244a4039d54e667d1d7e509e3eed6bca8795509fafb56e224469df9b98e78789"
+    },
+    "tests/check_hud_decoder.py": {
+      "bytes": 1501,
+      "sha256": "ec04e5d7a0d178ac53d1b7716f1443168e65e8f3e398c26b14393c09f40ad0e9"
+    },
+    "tests/check_math.py": {
+      "bytes": 2351,
+      "sha256": "f31437c6a20c477430ca1ec07e7fa852bdeab31065579a1ad33b1c7e42f43b91"
+    },
+    "tests/dsp_math_kernel.c": {
+      "bytes": 2165,
+      "sha256": "1df29f11550c6b84dd02d018e2e715166d3f88464e1aa331f15fd466d0b7f11b"
+    },
+    "tests/e2e_desktop_virtual_jaguar.py": {
+      "bytes": 22433,
+      "sha256": "733c5cad5aa4298faccc79fbdc2b9eea85073cd0bd1d657fe47e69dbb0be77c2"
+    },
+    "tests/e2e_playability.py": {
+      "bytes": 9622,
+      "sha256": "5a38e65c0a3ac1ba4d051bb63e6254df94edd7ed70e3fc006dc77cdf69a99863"
+    },
+    "tests/e2e_virtual_jaguar.py": {
+      "bytes": 16450,
+      "sha256": "518b24d2648402ebb40691d92531a8f6eb91a1c86fc8512a49abeafb7ab736ad"
+    },
+    "tests/fixtures/desktop-black.png": {
+      "bytes": 15117,
+      "sha256": "54782880f463b1b3763e63b56e5ce1323df75bb53fd5018ba2fa03220a097393"
+    },
+    "tests/fixtures/desktop-ntsc.png": {
+      "bytes": 74741,
+      "sha256": "f6295f9559d3dae5591ab89a069ca2275031150c17f5c7049796fe317082ee14"
+    },
+    "tests/fixtures/desktop-pal.png": {
+      "bytes": 73955,
+      "sha256": "b3b6865fd862d714a4a37776c4c61936e0de62a512d023672d3d2c9c8775bdd5"
+    },
+    "tests/make_fault_rom.py": {
+      "bytes": 3774,
+      "sha256": "b23c9801f40144a9bc26760f37cfb2d92395fa8942ac854995564ea14f920441"
+    },
+    "tests/math_kernel.c": {
+      "bytes": 819,
+      "sha256": "12172ec24c3a1e5b7da107fd8b53b56e8cc6669e8a6213f8128be0f52cd047ae"
+    },
+    "tests/playability_suite.py": {
+      "bytes": 4470,
+      "sha256": "c30241c32bfc68281b16af7e27ae9e17253c6702472ac72ba0dea25c64a1326a"
+    },
+    "tests/vj.py": {
+      "bytes": 5337,
+      "sha256": "a6d659de4631d1a16f36e151e7480c3d7e28bbad51b49ef15dff316e79d7d882"
+    },
+    "tools/build_dsp_game.py": {
+      "bytes": 3479,
+      "sha256": "1248bed36e903c8820bab46cbdeebc53b1dc11b822c8756c22018146e535c90f"
+    },
+    "tools/build_inputs.py": {
+      "bytes": 1253,
+      "sha256": "7adc3b15f4e2eec864186df38ba34c6bd801580c82eb2f3ffa08caa0b8c410ed"
+    },
+    "tools/build_jrisc_tools.py": {
+      "bytes": 2458,
+      "sha256": "259d2a09744e50f6459e2ccbc06e8129bce447041aa9b285bc68e931f33ec8e7"
+    },
+    "tools/check_bios_path_regression.py": {
+      "bytes": 6998,
+      "sha256": "7601e8b8934933dc2481677d9be1675a4e95d84e56a5636c0c7cbd3c51bdca3c"
+    },
+    "tools/check_packaged_build.py": {
+      "bytes": 4839,
+      "sha256": "11383f0c8b8ba0b63c61ca936b61a4df8ad62cfef94b73b40b23d3522eddab84"
+    },
+    "tools/check_reproducibility.py": {
+      "bytes": 1354,
+      "sha256": "3ebf87adfa544326f7cf7c77acc6b179a2e3f0bdd921e4c71dec7630f0a7a7fa"
+    },
+    "tools/convert_assets.py": {
+      "bytes": 21987,
+      "sha256": "f9251180dcfae68ecf2a1497ddda58fd1d2b1e213b92cc054207fb13c6d8fb5a"
+    },
+    "tools/cry_palette.json": {
+      "bytes": 3556,
+      "sha256": "5e0ae4fa507c21eb6ddf8ff5e659e3860e52680c571354522f12f152acd743b5"
+    },
+    "tools/fetch_upstream.py": {
+      "bytes": 1115,
+      "sha256": "4c5bb875158ad67fd61e91313656716ffd58b97f9cd584d8699171a586e398f6"
+    },
+    "tools/make_obl.py": {
+      "bytes": 2467,
+      "sha256": "741436d4eb81e04a624dcd28038317c661d87b9e9652cf4e266646afec228714"
+    },
+    "tools/make_release.py": {
+      "bytes": 5339,
+      "sha256": "1aa3805dd675e25836a19b4adf74e2341ea8819828356232dd735c52ee5d511b"
+    },
+    "tools/make_render_tables.py": {
+      "bytes": 525,
+      "sha256": "7e72bed07a1f67f7f4c829bee1911347e9f9a52a02266bb087ff92335831a295"
+    },
+    "tools/make_report.py": {
+      "bytes": 10670,
+      "sha256": "22ad00cfc966776c6d69b2ffcc2a1f34d1b01a165a852a65873dd45265f302ff"
+    },
+    "tools/make_source_archive.py": {
+      "bytes": 6876,
+      "sha256": "8ec19b18b2554042cc0aba7ccf17fc84db44e7f43a5eae9eb9e54bd5573977de"
+    },
+    "tools/memory_map.py": {
+      "bytes": 1522,
+      "sha256": "9a56442507c4038fd9f8e6c0d935ff157962a88cb92bfa1c4eaf3fe382c91b4e"
+    },
+    "tools/pack_rom.py": {
+      "bytes": 1925,
+      "sha256": "3dd2f056496bb028cba96851e931c399b2e67540a9a11e54427bcd360e3eceec"
+    },
+    "tools/patches/vbcc-jrisc-binary32.patch": {
+      "bytes": 6741,
+      "sha256": "35c92a8bff80d77ddb45829e3f3271436d17402ae9c657e36e2f17e118be5416"
+    },
+    "tools/rebuild_bootstrap.py": {
+      "bytes": 1402,
+      "sha256": "e6621b6d87c99ce0257ab4e71649af91c9d34e94f113b2dc27c4e7399f4cf8c1"
+    },
+    "tools/run_virtual_jaguar.py": {
+      "bytes": 1420,
+      "sha256": "f9962a09192f45ad4378bbb4fab5c8a30adb235527a3c2a2b26a52db2ba69099"
+    },
+    "tools/verify_release.py": {
+      "bytes": 13020,
+      "sha256": "f9ca6d150ce80bb30e74ad14e2c7eb384bcbb2a1641bd252d9b1323345b89d37"
+    },
+    "vendor/jrisc/UPSTREAM-README.txt": {
+      "bytes": 1277,
+      "sha256": "228fbe80d797f58b51f1a08d2b63c901dd5c653b9774da3e26d4ce32b8d06404"
+    },
+    "vendor/jrisc/sources.json": {
+      "bytes": 791,
+      "sha256": "ef48c40610e72346d060d4cfaf7b60a3ef3a364852b61d8146a9cc036fb46bd9"
+    },
+    "vendor/jrisc/vasm.tar.gz": {
+      "bytes": 571081,
+      "sha256": "d2a14edcfc79936dbd4d615783c81cb501434c41bf1fb0fcad04e1f8ea522db7"
+    },
+    "vendor/jrisc/vbcc.tar.gz": {
+      "bytes": 1084764,
+      "sha256": "3fdf4d01a87c321d2582e2fd69e33efed1e735c9d130dfe943b60004118e4eb1"
+    },
+    "vendor/jrisc/vlink.tar.gz": {
+      "bytes": 269537,
+      "sha256": "8d151cdd30a4feb575a364e68810c2bc300fe1a7c074dbbee6fd1175a6c5bfae"
+    },
+    "vendor/lb1sf68.S": {
+      "bytes": 102286,
+      "sha256": "e1e35c4b68aef3053ec118607508b8584d91e71b6f14e586c32e394a6bd47240"
+    },
+    "vendor/lyxass/LICENSE": {
+      "bytes": 1073,
+      "sha256": "91a54c70553047c9d109bfefb0fe63241770a6ba059f9fea11bebf97a763625d"
+    },
+    "vendor/lyxass/Makefile": {
+      "bytes": 1014,
+      "sha256": "39aa80276f85ab53189c657a68923f519c4483f220c85eba2436fbcf11f30ccf"
+    },
+    "vendor/lyxass/README.md": {
+      "bytes": 409,
+      "sha256": "ee48dfc969c073368f8ef38469eac39f8a19bc953d29c5b320ca42e212c7e6de"
+    },
+    "vendor/lyxass/debug.c": {
+      "bytes": 192,
+      "sha256": "20b49a8580f7db1ac42d6dfad04db12b8b1a3dcb692108e5b48be7c77aa2c6f1"
+    },
+    "vendor/lyxass/error.c": {
+      "bytes": 5966,
+      "sha256": "d6ee8a3c5f8af23f376db5dcf133dc00fd171c8909699b25894ac479e27d8aa5"
+    },
+    "vendor/lyxass/error.h": {
+      "bytes": 1403,
+      "sha256": "24b047fbb913dd6027c532cb57b277b2784a3745d9222500cd6d2558dcd5d655"
+    },
+    "vendor/lyxass/expression.c": {
+      "bytes": 9274,
+      "sha256": "112e777c4a82bca50ed1eed912daff38070f2ebc57efd3ddc9d04ca075c9f7b6"
+    },
+    "vendor/lyxass/global_vars.h": {
+      "bytes": 3019,
+      "sha256": "2954ea1a851bd0de9c2df44d186edb2003768e87b0b24b9e624a51e6a45a9ca1"
+    },
+    "vendor/lyxass/jaguar.c": {
+      "bytes": 12530,
+      "sha256": "5bf5c62efa0916b80d074b3eac9a449291eda675d736d9db7f8e48eeb9755c7a"
+    },
+    "vendor/lyxass/jaguar.h": {
+      "bytes": 2107,
+      "sha256": "03d72d99d32a8454d477a54e5dacd517ea97f08fb76884ed42924bf42d8afd29"
+    },
+    "vendor/lyxass/label.c": {
+      "bytes": 11146,
+      "sha256": "5672b8525b53f74a9cb8b50539373023bfa0124e64dc11bc23e6c151a145e8fc"
+    },
+    "vendor/lyxass/label.h": {
+      "bytes": 1348,
+      "sha256": "635ea0eceda276e2257c5c2b2a1181de11570b6fbd09a9035081dea9803117c8"
+    },
+    "vendor/lyxass/lyxass.c": {
+      "bytes": 23238,
+      "sha256": "a102bd30931f58a29bee5e9e1f4e2efe27d839e3a20dae5050ab28135d80af2e"
+    },
+    "vendor/lyxass/macro.c": {
+      "bytes": 2883,
+      "sha256": "3402ecedc902a6168fbfa356513121731cc920931eb7b7a71d633ea004d15f2c"
+    },
+    "vendor/lyxass/mnemonics.c": {
+      "bytes": 13133,
+      "sha256": "710f055d1f92ecff36ec2c206bb0c38c1881d69bc4eb236003a601d958806939"
+    },
+    "vendor/lyxass/mnemonics.h": {
+      "bytes": 3086,
+      "sha256": "9b047120e9237229a07dfcbf828d40951641ce05a79688db11f5b11c8a302180"
+    },
+    "vendor/lyxass/my.h": {
+      "bytes": 222,
+      "sha256": "691e054799d65f55ed576a5cc4d02d7a3bfa57a09c4a1cf8ce2bd116efcffacc"
+    },
+    "vendor/lyxass/opcode.c": {
+      "bytes": 1377,
+      "sha256": "6d292bdfecea41f3fd0fd71d319eb3b352d6702ea5b8c4cc42b3eedccfabb76f"
+    },
+    "vendor/lyxass/opcode.h": {
+      "bytes": 315,
+      "sha256": "1aa60a5f7bc4daf5d9bfd191929a84b0c049fbb1bd13ec021a1bc2ba8d93bc04"
+    },
+    "vendor/lyxass/output.h": {
+      "bytes": 402,
+      "sha256": "1313ea269c005e35e303acaced6e5e9f94ecba566c3af814e2034a3d8cc749e7"
+    },
+    "vendor/lyxass/parser.c": {
+      "bytes": 12368,
+      "sha256": "46362b45f7f5f93f2daf914e55f646084667862f3000e253cabfce0797abd7d7"
+    },
+    "vendor/lyxass/parser.h": {
+      "bytes": 841,
+      "sha256": "bb92e4c11d6a2d02e18ecd0fdde560f9b110df41b689d53bd2b7ea030fa67259"
+    },
+    "vendor/lyxass/pseudo.c": {
+      "bytes": 22206,
+      "sha256": "48d05f3cb5827ffc1bc06fcf7184b0e1562d211220faa87d1ed0c82d9ed69cdc"
+    },
+    "vendor/lyxass/pseudo.h": {
+      "bytes": 3237,
+      "sha256": "90f3706500a91cc6adc73aefa8cc56ca202acd660002087f98883b4bc9cd4a16"
+    },
+    "vendor/lyxass/ref.c": {
+      "bytes": 1154,
+      "sha256": "857be66bf322a602bdd0b3479d9a15a6625ebd491a3a1396c5e3ae0554f5f893"
+    },
+    "vendor/new_bjl/LICENSE": {
+      "bytes": 1275,
+      "sha256": "9bbf974fa4d4fc495ec87bff4c0a9d9c3fa8158bdceac013ba8e4b9fab48774d"
+    },
+    "vendor/new_bjl/README.md": {
+      "bytes": 436,
+      "sha256": "927693a981b63c06d5b47ba22ce18e9dbf63d45964d2732405e4645e22582f78"
+    },
+    "vendor/new_bjl/js/inc/README.md": {
+      "bytes": 459,
+      "sha256": "ec88abf1f5aabf184ac373bcf0dbd7b57c7892afb64a03b20fd1c3e34f7c63b9"
+    },
+    "vendor/new_bjl/js/inc/hexscr.inc": {
+      "bytes": 3295,
+      "sha256": "3eb1bc4ab85c119718d9a9ae27c62d8bd03cf9bac040e7907a212d1085dd9e4c"
+    },
+    "vendor/new_bjl/js/inc/hexscr.md": {
+      "bytes": 474,
+      "sha256": "5ef78fab36e37a912c458117593fb4c8dcf31897cc3fd95ae9628c548c701cd8"
+    },
+    "vendor/new_bjl/js/inc/linedraw.inc": {
+      "bytes": 2022,
+      "sha256": "0722a7b59e55849f1e5c9277bd34119149909aafe1d3dc07d77d2a5b27434e22"
+    },
+    "vendor/new_bjl/js/inc/linedraw_atari.inc": {
+      "bytes": 1508,
+      "sha256": "b96a41651467dda89d703b04dc33a8b6fff802a97ebfa59142d4bc9bf83860c8"
+    },
+    "vendor/new_bjl/js/inc/memcpy.inc": {
+      "bytes": 889,
+      "sha256": "495593d28ce0884b4b5319a1392ce123db69a964f74db373888aff3ae464534f"
+    },
+    "vendor/new_bjl/js/inc/memset.inc": {
+      "bytes": 784,
+      "sha256": "14208b572ae514c74e029ec0b02726a59ba1bc2746a93ddbd9f5d7e78a18ead2"
+    },
+    "vendor/new_bjl/js/inc/memzero.inc": {
+      "bytes": 592,
+      "sha256": "6129b5b99be2ebe5e52987b227d543b703bb49b61987f8718f8a7b192402d0ac"
+    },
+    "vendor/new_bjl/js/inc/minihex.inc": {
+      "bytes": 2033,
+      "sha256": "6ff323191e6bc112414f9fe10a98b4d7ff2e0cb9e0210567a08e9e75c58e06ce"
+    },
+    "vendor/new_bjl/js/inc/sqrt.inc": {
+      "bytes": 363,
+      "sha256": "576b348e7c93520dc505274d782a50ab5d9d6d6d58e47515aa96eb53f6594c19"
+    },
+    "vendor/new_bjl/js/inc/txtscr.inc": {
+      "bytes": 5276,
+      "sha256": "acce1b76448d09a811f93f59542de0bedc82d78454a4cda2fe0f7c5a5d1ff00f"
+    },
+    "vendor/new_bjl/js/inc/txtscr.md": {
+      "bytes": 601,
+      "sha256": "59883e8e751da606372eeccaa94b96f981f5e21e13df1ac48a81c35a4746547a"
+    },
+    "vendor/new_bjl/js/inc/videoinit.inc": {
+      "bytes": 691,
+      "sha256": "c5fea7c8819e7acd03e50e2e9b61878883d612b948b0604256c855542fe6aa2c"
+    },
+    "vendor/new_bjl/js/macro/help.mac": {
+      "bytes": 6105,
+      "sha256": "d1a9f16a375fd9a6329e3f53ca955422d4414869239af409185fcea4ed289d4d"
+    },
+    "vendor/new_bjl/js/macro/joypad1.mac": {
+      "bytes": 2271,
+      "sha256": "9da50b02a94befabe62255f7885c329f2d4972114cad15f58beb54ff1b46b13d"
+    },
+    "vendor/new_bjl/js/macro/joypad2.mac": {
+      "bytes": 2240,
+      "sha256": "a03e8ea0e8fe56369e9eb75a6be3a095f6606b4f4f9a1f9f2dab4a7e94e8310a"
+    },
+    "vendor/new_bjl/js/macro/module.mac": {
+      "bytes": 2466,
+      "sha256": "26e9b71f95de98fc62ee86438feef2e1433da69b256cd9c6632fd783a6f85aa1"
+    },
+    "vendor/new_bjl/js/symbols/blit_eq.js": {
+      "bytes": 16303,
+      "sha256": "fb6c00cc72b47f37b6c5c383dda191be38f424806e59ea43fca36cc94d7b5be2"
+    },
+    "vendor/new_bjl/js/symbols/jagregeq.js": {
+      "bytes": 9879,
+      "sha256": "fa29cf4bc16d17b685a8a75ef27a939a3f714715fcb3dcc0b593aafe64509019"
+    },
+    "vendor/new_bjl/js/symbols/joypad.js": {
+      "bytes": 920,
+      "sha256": "a01fb0929daec6496b5e22bd165369f5162bc1e4f65d39cb8a9018fa08b66fc8"
+    },
+    "vendor/new_bjl/js/var/README.md": {
+      "bytes": 39,
+      "sha256": "a525dbc6ae968192737b0163fc73cdd06b99a7054043a0795e4fcf1f466bbd2a"
+    },
+    "vendor/new_bjl/js/var/hexscr.var": {
+      "bytes": 140,
+      "sha256": "95955a06172e149cdd146cb384aacefc8a3b80eff7c87afa1488aadab463bdb5"
+    },
+    "vendor/new_bjl/js/var/txtscr.var": {
+      "bytes": 143,
+      "sha256": "59103065cdddb5b0107a720d2b32ad73644aa7adbdf3b962e34c6be22a4c35af"
+    },
+    "vendor/revisions.json": {
+      "bytes": 374,
+      "sha256": "c6efdd54fd31a7d5fee041f75de0a29f692ae2e1d4809a45f545c2a9227faf6b"
+    },
+    "vendor/virtualjaguar-libretro-source.tar.gz": {
+      "bytes": 7524267,
+      "sha256": "44ba2f06621731eade2f66d07dae3c728cbf41528c32c09d8cd2eca738d6594b"
+    }
+  }
+}

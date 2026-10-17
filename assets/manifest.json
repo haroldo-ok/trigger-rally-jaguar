@@ -1,0 +1,510 @@
+{
+  "format": 1,
+  "source_commit": "079ac53216b74598b652ce3bf11478beb5c6832b",
+  "content_license": "restricted; licenses/TriggerRally-terms.md",
+  "assets_bytes": 2216280,
+  "tracks": [
+    {
+      "id": "uUJTPz6M",
+      "name": "Forest meander",
+      "checkpoints": 19,
+      "explicit_scenery": 58,
+      "scenery": 161,
+      "origin": [
+        1224.0,
+        -1976.0
+      ],
+      "map_step_m": 8.0,
+      "map_coverage_m": 1024.0
+    },
+    {
+      "id": "RF87t6b6",
+      "name": "Cliffhanger",
+      "checkpoints": 7,
+      "explicit_scenery": 19,
+      "scenery": 132,
+      "origin": [
+        3344.0,
+        -4928.0
+      ],
+      "map_step_m": 8.0,
+      "map_coverage_m": 1024.0
+    },
+    {
+      "id": "v3base2",
+      "name": "Base",
+      "checkpoints": 2,
+      "explicit_scenery": 1,
+      "scenery": 121,
+      "origin": [
+        1064.0,
+        -1936.0
+      ],
+      "map_step_m": 8.0,
+      "map_coverage_m": 1024.0
+    }
+  ],
+  "meshes": [
+    {
+      "name": "arbusu",
+      "source": "a/meshes/car1-body.json",
+      "parts": [
+        [
+          "arbusu",
+          1606,
+          1499
+        ]
+      ],
+      "full_vertices": 1606,
+      "full_triangles": 1499,
+      "lod_vertices": 208,
+      "lod_triangles": 414
+    },
+    {
+      "name": "wheel",
+      "source": "a/meshes/car1-wheel.json",
+      "parts": [
+        [
+          "wheel",
+          226,
+          257
+        ]
+      ],
+      "full_vertices": 226,
+      "full_triangles": 257,
+      "lod_vertices": 64,
+      "lod_triangles": 129
+    },
+    {
+      "name": "icarus",
+      "source": "a/meshes/icarus-body.json",
+      "parts": [
+        [
+          "Body",
+          888,
+          846
+        ],
+        [
+          "WingRI",
+          69,
+          61
+        ],
+        [
+          "WingRO",
+          47,
+          37
+        ],
+        [
+          "WingLI",
+          69,
+          61
+        ],
+        [
+          "WingLO",
+          47,
+          37
+        ],
+        [
+          "Glass",
+          55,
+          46
+        ],
+        [
+          "BodyNR",
+          157,
+          168
+        ]
+      ],
+      "full_vertices": 1332,
+      "full_triangles": 1256,
+      "lod_vertices": 226,
+      "lod_triangles": 444
+    },
+    {
+      "name": "arch",
+      "source": "a/meshes/arch.r54.js",
+      "parts": [
+        [
+          "Torus.001",
+          324,
+          168
+        ]
+      ],
+      "full_vertices": 324,
+      "full_triangles": 168,
+      "lod_vertices": 66,
+      "lod_triangles": 124
+    },
+    {
+      "name": "chevron",
+      "source": "a/meshes/chevron.r54.js",
+      "parts": [
+        [
+          "ChevronSign",
+          66,
+          104
+        ]
+      ],
+      "full_vertices": 66,
+      "full_triangles": 104,
+      "lod_vertices": 66,
+      "lod_triangles": 104
+    },
+    {
+      "name": "tree",
+      "source": "a/scenery/tree36/tree36.js",
+      "parts": [
+        [
+          "Tree36",
+          45,
+          40
+        ]
+      ],
+      "full_vertices": 45,
+      "full_triangles": 40,
+      "lod_vertices": 45,
+      "lod_triangles": 40
+    },
+    {
+      "name": "fence",
+      "source": "a/scenery/wood_el1/wood_el1.js",
+      "parts": [
+        [
+          "wood_el1",
+          236,
+          176
+        ]
+      ],
+      "full_vertices": 236,
+      "full_triangles": 176,
+      "lod_vertices": 56,
+      "lod_triangles": 104
+    },
+    {
+      "name": "checkpoint",
+      "source": "scripts/client/misc.js",
+      "parts": [
+        [
+          "three double-sided rings",
+          384,
+          384
+        ]
+      ],
+      "full_vertices": 384,
+      "full_triangles": 384,
+      "lod_vertices": 384,
+      "lod_triangles": 384
+    }
+  ],
+  "textures": {
+    "a/meshes/car1-diff.jpg": 0,
+    "a/meshes/icarus/glass.jpg": 1,
+    "a/meshes/icarus/wings.jpg": 2,
+    "a/textures/archtex.jpg": 3,
+    "a/textures/chevron.jpg": 4,
+    "a/scenery/tree36/diffuse.png": 5,
+    "a/scenery/tree36/normal.jpg": 6,
+    "a/scenery/wood_el1/wood_elements1.jpg": 7,
+    "a/scenery/wood_el1/wood_elements1_nmp.jpg": 8,
+    "a/textures/car1-diff.jpg": 9,
+    "a/textures/dirt.jpg": 10,
+    "a/textures/dust.png": 11,
+    "a/textures/heightdetail1.jpg": 12,
+    "a/textures/miramar-z-512/miramar_bk.jpg": 13,
+    "a/textures/miramar-z-512/miramar_dn.jpg": 14,
+    "a/textures/miramar-z-512/miramar_ft.jpg": 15,
+    "a/textures/miramar-z-512/miramar_lf.jpg": 16,
+    "a/textures/miramar-z-512/miramar_rt.jpg": 17,
+    "a/textures/miramar-z-512/miramar_up.jpg": 18,
+    "a/textures/rock.jpg": 19,
+    "shader/terrain-vegetation": 20
+  },
+  "samples": [
+    {
+      "name": "checkpoint",
+      "samples": 2430,
+      "rate": 8000
+    },
+    {
+      "name": "crash1",
+      "samples": 6458,
+      "rate": 8000
+    },
+    {
+      "name": "crash2",
+      "samples": 7140,
+      "rate": 8000
+    },
+    {
+      "name": "engine1",
+      "samples": 9791,
+      "rate": 8000
+    },
+    {
+      "name": "engine2",
+      "samples": 9791,
+      "rate": 8000
+    },
+    {
+      "name": "engine3",
+      "samples": 19023,
+      "rate": 8000
+    },
+    {
+      "name": "gearwhine",
+      "samples": 2006,
+      "rate": 8000
+    },
+    {
+      "name": "hydraulic",
+      "samples": 6937,
+      "rate": 8000
+    },
+    {
+      "name": "kaching",
+      "samples": 2908,
+      "rate": 8000
+    },
+    {
+      "name": "scrape2",
+      "samples": 5166,
+      "rate": 8000
+    },
+    {
+      "name": "scrape3",
+      "samples": 12427,
+      "rate": 8000
+    },
+    {
+      "name": "slam",
+      "samples": 4506,
+      "rate": 8000
+    },
+    {
+      "name": "voice",
+      "samples": 79885,
+      "rate": 8000
+    },
+    {
+      "name": "wind",
+      "samples": 15979,
+      "rate": 8000
+    }
+  ],
+  "inputs": {
+    "a/tracks/nice.png": {
+      "sha256": "03337097f9a7c151ce028a07d49bb58100a5cf4e87a6f9664fe6cddc1f3d7464",
+      "bytes": 806573
+    },
+    "v1/envs/alp": {
+      "sha256": "4b4cebc15fdec73a7669d70bca391e094b901cfcc632bba62ac9e581e155c8d7",
+      "bytes": 1471
+    },
+    "a/meshes/car1-body.json": {
+      "sha256": "0d1f08943f79400148068eec7b9c3e02d8051626e071c3e83a4a42da9c4be404",
+      "bytes": 138078
+    },
+    "a/meshes/car1-diff.jpg": {
+      "sha256": "f0060d4e5561fc5bd4b18341a8bbf80064b1e9b1de2008657059a5a244fcd4de",
+      "bytes": 225000
+    },
+    "a/meshes/car1-wheel.json": {
+      "sha256": "55510139cce8ff2cc9ebd1e0f4dc1dfcc686b561a791762e09a8f24b996a87bb",
+      "bytes": 19111
+    },
+    "a/meshes/icarus-body.json": {
+      "sha256": "12e65229596a403102658a48f43ef93798eb4342ecbd7c21c794ed57c089245f",
+      "bytes": 145672
+    },
+    "a/meshes/icarus/glass.jpg": {
+      "sha256": "b5c117edc42b20ef7501a583700015ae208b9a9a75ccad46a0d721c05c380703",
+      "bytes": 6152
+    },
+    "a/meshes/icarus/wings.jpg": {
+      "sha256": "e95e7aaf8207d761d3bc89332835263f717501fa1631725de561b4af3c333691",
+      "bytes": 95092
+    },
+    "a/meshes/arch.r54.js": {
+      "sha256": "c38405839ed776ba3f3e33457dda9be7adcfa84ef5bfbcd84a0b78951fe82740",
+      "bytes": 19030
+    },
+    "a/textures/archtex.jpg": {
+      "sha256": "b9eab7aacd93b1c82c1ed3a04b25ee55d6dd914495383b8b525ec3453021a911",
+      "bytes": 86750
+    },
+    "a/meshes/chevron.r54.js": {
+      "sha256": "60a883bce9bb12f8771368577dba4c519dff51421de8291af1d5b05b209b0091",
+      "bytes": 10438
+    },
+    "a/textures/chevron.jpg": {
+      "sha256": "6bfef00dba9aae0bc58a34c2df10f0ef9d264ed1115ad7e273051a1b01807c84",
+      "bytes": 4100
+    },
+    "a/scenery/tree36/tree36.js": {
+      "sha256": "9b39f4634e6b00e8aadf5b426989c1fc8c10767049a6c3eb26a4fab79d973e81",
+      "bytes": 5427
+    },
+    "a/scenery/tree36/diffuse.png": {
+      "sha256": "1322161d8fc1620449ec8c4b493e92a51f889ffe94d2133c304789727f3156d2",
+      "bytes": 131176
+    },
+    "a/scenery/tree36/normal.jpg": {
+      "sha256": "db0091b1a450e48f47f7bdffbd8139f290f062668fb75f6ee20ea77bc9de3634",
+      "bytes": 45012
+    },
+    "a/scenery/wood_el1/wood_el1.js": {
+      "sha256": "a139f4236864609f8367953173d3c652575e250df7a2c62b93d6ba1712a59137",
+      "bytes": 19566
+    },
+    "a/scenery/wood_el1/wood_elements1.jpg": {
+      "sha256": "2744f7a616d3167c6aca177f227d10a1c34df8cf30afd022bfd22963e04e37d3",
+      "bytes": 122154
+    },
+    "a/scenery/wood_el1/wood_elements1_nmp.jpg": {
+      "sha256": "af768fcf0d0389a6960ab87c49283999356d71f02603defea47abf491141f64b",
+      "bytes": 196752
+    },
+    "a/textures/car1-diff.jpg": {
+      "sha256": "f0060d4e5561fc5bd4b18341a8bbf80064b1e9b1de2008657059a5a244fcd4de",
+      "bytes": 225000
+    },
+    "a/textures/dirt.jpg": {
+      "sha256": "2519183ede4c0dfdf2cc18f2815ba8a53ca8eecd29087a09d0e13eeb9377faea",
+      "bytes": 199278
+    },
+    "a/textures/dust.png": {
+      "sha256": "56e28073eadb1ec0e610ee9856c1acc1a277e780b032825098f8995438b453db",
+      "bytes": 9228
+    },
+    "a/textures/heightdetail1.jpg": {
+      "sha256": "a715d9b2526a7f2d7bc7358d0ba9dadeddcd15aeb997361e26387f2b163c2f87",
+      "bytes": 51109
+    },
+    "a/textures/miramar-z-512/miramar_bk.jpg": {
+      "sha256": "85aa167635b382b5c0c75e15fcf80e61dc6c5639249aab7de42a48ee13f36178",
+      "bytes": 54111
+    },
+    "a/textures/miramar-z-512/miramar_dn.jpg": {
+      "sha256": "337172fc8b04d2f11bef31ce1753c4aab88b73c26e92213e460b2c077968541d",
+      "bytes": 6521
+    },
+    "a/textures/miramar-z-512/miramar_ft.jpg": {
+      "sha256": "3214ab6056791dbe0612fb3feb9e18e1081bf4b149df0b565ccff94aaeb1114f",
+      "bytes": 48700
+    },
+    "a/textures/miramar-z-512/miramar_lf.jpg": {
+      "sha256": "768bd74d8b2a17387d68c02a79641b9c4fb4612791a772091faccc0c4b7b218e",
+      "bytes": 44688
+    },
+    "a/textures/miramar-z-512/miramar_rt.jpg": {
+      "sha256": "10d1d34fab0cd2c5b114f317329e5c5a91ad88ea2d06736e86da08a3408a07d2",
+      "bytes": 45108
+    },
+    "a/textures/miramar-z-512/miramar_up.jpg": {
+      "sha256": "06bbf08bf69f321f1e76d5101e407dbe9b858b01769584e959a858f1b199a7a1",
+      "bytes": 30048
+    },
+    "a/textures/rock.jpg": {
+      "sha256": "11ee462562977ddf27664fff22b5388259e294129ff64653c6b674acc2019d3a",
+      "bytes": 100584
+    },
+    "scripts/client/misc.js": {
+      "sha256": "7398c6979d323c75ea3bf6a52dc08e81c9bdb0d5ae3078b4b9f54cf9cde361d9",
+      "bytes": 1861
+    },
+    "scripts/client/terrain.js": {
+      "sha256": "de972d423f22e4397375738f820641a472e968cc5205db26bae71e2022c15222",
+      "bytes": 27900
+    },
+    "v1/tracks/uUJTPz6M": {
+      "sha256": "86375dffa40ab42ded322e8be3486b5d777f84a8ca260862ea58cd86cb5fd9c7",
+      "bytes": 11601
+    },
+    "v1/tracks/RF87t6b6": {
+      "sha256": "90525a1e2d36c93c2c8e40fd9ccded3de2331fce1703c537af22e1728632f77a",
+      "bytes": 9939
+    },
+    "v1/tracks/v3base2": {
+      "sha256": "8db634eebda4147b79c05466bad8ae151378ab285549ee220869f925ddb01387",
+      "bytes": 1496
+    },
+    "v1/cars/ArbusuG": {
+      "sha256": "e9b8b440f23060733e36b4ec2e42b88b2279aa72b7456280ab19a3a5fb2be3b5",
+      "bytes": 3322
+    },
+    "v1/cars/Icarus": {
+      "sha256": "0bbe07153d336f14a1574914bd1b3aeb0e2fb5ce30d9df9336158eb768a154a6",
+      "bytes": 1970
+    },
+    "a/sounds/checkpoint.ogg": {
+      "sha256": "ba89cef5c3f91b9a2b5c8303687523d37817a511f103b780d1e1d4cd5e5c3bcb",
+      "bytes": 6707
+    },
+    "a/sounds/crash1.ogg": {
+      "sha256": "27150b224c23b445adc0d18bb161a015f2b404e3f0881a75ca0263b2189ab9df",
+      "bytes": 13054
+    },
+    "a/sounds/crash2.ogg": {
+      "sha256": "731012bc3fb282162f6a6e7cd3ffa86af69ce6295ed04549195d505cfab04880",
+      "bytes": 13396
+    },
+    "a/sounds/engine1.ogg": {
+      "sha256": "ac258a5dcd2f3c15cdc34eba64a283812b8906493af33d936bf6b2a5f907e7d4",
+      "bytes": 12623
+    },
+    "a/sounds/engine2.ogg": {
+      "sha256": "6a7935ca0b518e99fd0d8444e9ea8aab99913383b4a601e3c61a5f1b2a806c12",
+      "bytes": 13554
+    },
+    "a/sounds/engine3.ogg": {
+      "sha256": "aa8aa73d0f297b593422a909479fc25da21c3e6ca007d9cc6c9f96c39e1ab37b",
+      "bytes": 28062
+    },
+    "a/sounds/gearwhine.ogg": {
+      "sha256": "e11c889df37edd4bbda6c61acf250a20c01f92de47b57a322e77d61a5aa79537",
+      "bytes": 6922
+    },
+    "a/sounds/hydraulic.ogg": {
+      "sha256": "25ff183814ce5c06ab4d728299ad4ad9ab68a350595cb7cf83de52c6f574e0c0",
+      "bytes": 8004
+    },
+    "a/sounds/kaching.ogg": {
+      "sha256": "22c916618ebb21de6d18e498f307fbd30b3fe477e67cff17421e85872b5fc4a7",
+      "bytes": 4826
+    },
+    "a/sounds/scrape2.ogg": {
+      "sha256": "859b80ea9e454af0a7e3ae86f82a6961a31c415bc2edacfffed958a5477677f1",
+      "bytes": 10827
+    },
+    "a/sounds/scrape3.ogg": {
+      "sha256": "982990d8edf9952f3af84f37f4f52ba00e119af691e19fd726b6b655f432dbf2",
+      "bytes": 21694
+    },
+    "a/sounds/slam.ogg": {
+      "sha256": "e53e85ec938851effa6a283afe245396cf804fe71e0ac23cc036f48592971a3f",
+      "bytes": 9906
+    },
+    "a/sounds/voice.ogg": {
+      "sha256": "24cb418006a7000c0f723e38e7d02f62eb1645b625b8cd4fd5dc095c1ca32fe4",
+      "bytes": 233028
+    },
+    "a/sounds/wind.ogg": {
+      "sha256": "a16dc44399249dac7dbfd6f1f96fb89705406c287c89c496ecc1019d17e4c37d",
+      "bytes": 14685
+    }
+  },
+  "missing_upstream_assets": [
+    {
+      "reference": "/a/meshes/icarus/body.jpg",
+      "referenced_by": "a/meshes/icarus-body.json",
+      "handling": "original material diffuse color; no substitute texture invented"
+    }
+  ],
+  "adaptations": [
+    "64x64 CRY textures, no per-pixel normal mapping",
+    "8000 Hz mono PCM audio",
+    "128x128 local terrain windows at 8 metre spacing; bilinear collision sampling",
+    "Full mesh topology retained, runtime vertex-clustered LOD",
+    "Environment-density tree placements are deterministic adaptations, not identical to the browser LFIB tiler"
+  ]
+}
